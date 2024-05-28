@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clicked {
+    box-shadow: 0 0 0 0 #1b6ff8,
+                0 0 0 0 #1b70f841;
+    border-bottom: 0;
+}
+
+.wrong {
+    background-color: red;
+    border-radius: 9999px;
+    animation: flashWrong .3s ease-in-out 2 alternate;
+}
+
+.true {
+    background-color: rgb(62, 187, 62);
+    animation: flashTrue 0.5s;
+}
+
+@keyframes flashWrong {
+    50% {
+        background-color: white;
+    }
+    75% {
+        background-color: red;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+@keyframes flashTrue {
+    50% {
+        background-color: white;
+    }
+    100% {
+        background-color: rgb(62, 187, 62);
+    }
+}
